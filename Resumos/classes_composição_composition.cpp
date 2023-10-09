@@ -40,7 +40,7 @@ public:
     Ponto2D() : x {0}, y {0} {}
     //Construtor Parameterizado
     Ponto2D(int x, int y) : x {x}, y {y}{}
-    //Sobrecarga de operador >>
+    //Sobrecarga de operador <<
     friend ostream& operator<<(ostream& out, const Ponto2D& ponto_temp){
         out << '(' << ponto_temp.x << ", " << ponto_temp.y << ')';
         return out;

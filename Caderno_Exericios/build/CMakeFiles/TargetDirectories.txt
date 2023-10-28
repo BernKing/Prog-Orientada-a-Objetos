@@ -1,0 +1,4 @@
+C:/Users/ASUS/Desktop/projetos/CPP/Exercicios/build/CMakeFiles/Exercicios.dir
+C:/Users/ASUS/Desktop/projetos/CPP/Exercicios/build/CMakeFiles/PACKAGE.dir
+C:/Users/ASUS/Desktop/projetos/CPP/Exercicios/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/ASUS/Desktop/projetos/CPP/Exercicios/build/CMakeFiles/ZERO_CHECK.dir

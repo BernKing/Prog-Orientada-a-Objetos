@@ -1,0 +1,10 @@
+^C:\USERS\ASUS\DESKTOP\PROJETOS\CPP\EXERCICIOS\BUILD\CMAKEFILES\A997A43F029F683F67D6164A885B5B26\GENERATE.STAMP.RULE
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/ASUS/Desktop/projetos/CPP/Exercicios -BC:/Users/ASUS/Desktop/projetos/CPP/Exercicios/build --check-stamp-list CMakeFiles/generate.stamp.list --vs-solution-file C:/Users/ASUS/Desktop/projetos/CPP/Exercicios/build/Exercicios.sln
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

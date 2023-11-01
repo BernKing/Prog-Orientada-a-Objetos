@@ -11,6 +11,8 @@ public:
     int v_num, float v_ord_base, int v_h_extra, float v_p_hora_extra,
       bool v_f_turno);
 
+  double Calcula_ordenado() override;
+
   inline bool GetTurno() { return f_turno; }
   inline bool SetTurno(bool v_f_turno) { f_turno = v_f_turno; }
 

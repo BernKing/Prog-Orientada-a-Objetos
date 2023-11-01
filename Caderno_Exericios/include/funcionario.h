@@ -27,8 +27,16 @@ class Funcionario : public Pessoa {
   inline string GetSetor() { return setor; }
   inline int GetNum() { return num; }
 
+  inline float GetOrd_Base() { return ord_base; }
+  inline int GetH_Extra() { return h_extra; }
+  inline float GetP_Hora_Extra() { return p_hora_extra; }
+
   inline void SetSetor(string v_setor) { setor = v_setor; }
   inline void SetNum(int v_num) { num = num;}
+
+  inline void setOrd_Base(float v_ord_base) { ord_base = v_ord_base; }
+  inline void SetH_Extra(float v_h_extra) { h_extra = v_h_extra; }
+  inline void SetP_Hora_Extra(float v_p_hora_extra) { p_hora_extra = v_p_hora_extra; }
 
   friend istream& operator>>(istream& in, Funcionario& funcionario_temp);
 

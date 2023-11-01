@@ -3,5 +3,13 @@
 Administrativo::Administrativo() {}
 
 Administrativo::Administrativo(string v_nome, Data v_data, string v_morada, string v_setor, 
-    int v_num, float v_ord_base, int v_h_extra, float v_p_hora_extra)
-    : Funcionario(v_nome, v_data, v_morada, v_setor, v_num, v_ord_base, v_h_extra, v_p_hora_extra){}
+  int v_num, float v_ord_base, int v_h_extra, float v_p_hora_extra)
+  : Funcionario(v_nome, v_data, v_morada, v_setor, v_num, v_ord_base, v_h_extra, v_p_hora_extra){}
+
+
+double Administrativo::Calcula_ordenado() {
+	int ordenado_final { 0 };
+	int ordenado_extra = GetH_Extra() * GetP_Hora_Extra();
+
+	return ordenado_final = ordenado_extra + GetOrd_Base();
+}

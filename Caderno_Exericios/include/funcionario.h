@@ -6,6 +6,14 @@
 //Vai herdas tudo da class pessoa
 //Herança Simples
 //Funcionario é uma pessoa mais o setor num. 
+
+/*
+  Funcionario é uma classe abstrata com um metodo virtual que sera programado nas classes que herdarem dela;
+  https://en.cppreference.com/w/cpp/language/abstract_class
+Abstract classes are used to represent general concepts (for example, Shape, Animal), which can be used as base classes for concrete classes (for example, Circle, Dog).
+No objects of an abstract class can be created (except for base subobjects of a class derived from it) and no non-static data members whose type is an abstract class can be declared.
+*/
+
 class Funcionario : public Pessoa {
  public:
   //Construtores

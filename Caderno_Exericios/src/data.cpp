@@ -1,4 +1,4 @@
-#include <C:\Users\ASUS\Desktop\projetos\CPP\Exercicios\include\data.h>
+#include <C:\Users\ASUS\Documents\GitHub\Prog.-Orientada-a-Objetos\Caderno_Exericios\include\data.h>
 #include <fstream>
 #include <string>
 
@@ -75,6 +75,18 @@ bool Data::operator !=(const Data& data_comparar) const{
     }
 }
 
+bool Data::operator <(const Data& data) const{
+    int data_original = dia + mes + ano;
+    int data_comparar = data.GetDia() + data.GetMes() + data.GetAno();
+
+    if (data_original < data_comparar) {
+        return true;
+    } else {
+        return false;
+    }   
+}
+
+
 ostream& operator <<(ostream& out, const Data& data_temp){
   out << "Data: " << data_temp.dia << "/" << data_temp.mes << "/" << data_temp.ano << endl;
   return out;
@@ -96,3 +108,4 @@ istream& operator >>(istream& in, Data& data_temp){
 
   return in;
 }
+

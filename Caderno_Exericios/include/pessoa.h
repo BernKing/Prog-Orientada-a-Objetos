@@ -1,7 +1,7 @@
 #ifndef PESSOA_H
 #define PESSOA_H
 
-#include <C:\Users\ASUS\Desktop\projetos\CPP\Exercicios\include\data.h>
+#include <C:\Users\ASUS\Documents\GitHub\Prog.-Orientada-a-Objetos\Caderno_Exericios\include\data.h>
 
 #include <iostream>
 #include <string>
@@ -49,10 +49,10 @@ class Pessoa {
   void MaisNovo(const Pessoa& pessoa1, const Pessoa& pessoa2);
 
   //j)
-  void SaveFile();
+  void SaveFilePessoa();
 
   //k) e i)
-  void ReadFile();
+  void ReadFilePessoa();
 
  private:
   string nome;

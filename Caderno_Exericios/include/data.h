@@ -24,6 +24,8 @@ class Data{
 
   bool operator==(const Data& data_comparar) const;
   bool operator!=(const Data& data_comparar) const;
+
+  bool operator<(const Data& data_comparar) const;
         
 
   //friend permite a func acessar membros privados da classe

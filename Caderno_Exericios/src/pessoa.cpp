@@ -1,4 +1,4 @@
-#include <C:\Users\ASUS\Desktop\projetos\CPP\Exercicios\include\pessoa.h>
+#include <C:\Users\ASUS\Documents\GitHub\Prog.-Orientada-a-Objetos\Caderno_Exericios\include\pessoa.h>
 
 #include <fstream>
 #include <string>
@@ -95,7 +95,7 @@ void Pessoa::MaisNovo(const Pessoa& pessoa1, const Pessoa& pessoa2) {
         }    
 }
 
-void Pessoa::SaveFile(){
+void Pessoa::SaveFilePessoa(){
     string ficheiro;
     cout << "Introduza o nome do ficheiro: " << endl;
     cin >> ficheiro;
@@ -106,6 +106,7 @@ void Pessoa::SaveFile(){
     ofstream ficheiroPessoa(nome_ficheiro);
     if (!ficheiroPessoa.is_open()) {
         cerr << "Erro ao abrir ficheiro" << endl;
+        exit(1);
     }
     ficheiroPessoa << nome << ";";
     //dataP.escrever_ficheiro();
@@ -114,7 +115,7 @@ void Pessoa::SaveFile(){
     ficheiroPessoa.close();
 }
 
-void Pessoa::ReadFile(){
+void Pessoa::ReadFilePessoa(){
     string ficheiro;
     cout << "Introduza o nome do ficheiro: " << endl;
     cin >> ficheiro;

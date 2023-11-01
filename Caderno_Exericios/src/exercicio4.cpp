@@ -9,7 +9,7 @@
 #include <fstream>
 
 
-#include "C:\Users\ASUS\Desktop\projetos\CPP\Exercicios\include\pessoa.h"
+#include "C:\Users\ASUS\Documents\GitHub\Prog.-Orientada-a-Objetos\Caderno_Exericios\include\pessoa.h"
 using namespace std;
 
 //i)
@@ -118,7 +118,7 @@ int Exercicio4(){
     jonas.MaisNovo(jonas, joni);
 
     //j)
-    jonas.SaveFile();
+    jonas.SaveFilePessoa();
 
     system("pause");    
     return 0;

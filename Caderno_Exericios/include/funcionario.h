@@ -1,7 +1,7 @@
 #ifndef FUNCIONARIO_H
 #define FUNCIONARIO_H
 
-#include "C:\Users\ASUS\Desktop\projetos\CPP\Exercicios\include\pessoa.h"
+#include "C:\Users\ASUS\Documents\GitHub\Prog.-Orientada-a-Objetos\Caderno_Exericios\include\pessoa.h"
 
 //Vai herdas tudo da class pessoa
 //Herança Simples
@@ -20,6 +20,12 @@ class Funcionario : public Pessoa {
 
   inline void SetSetor(string v_setor) { setor = v_setor; }
   inline void SetNum(int v_num) { num = num;}
+
+  friend istream& operator>>(istream& in, Funcionario& funcionario_temp);
+
+  void SaveFileFuncionario();
+
+  void ReadFileFuncionario();
 
  private:
   string setor;

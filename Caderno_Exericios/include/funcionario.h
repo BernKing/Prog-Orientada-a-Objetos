@@ -11,7 +11,8 @@ class Funcionario : public Pessoa {
   //Construtores
   Funcionario();
 
-  Funcionario(string v_nome, Data v_data, string v_morada, string v_setor, int v_num);
+  Funcionario(string v_nome, Data v_data, string v_morada, string v_setor, int v_num, 
+    float v_ord_base, int v_h_extra, float v_p_hora_extra);
   
   void ShowFuncionario();
 
@@ -27,9 +28,15 @@ class Funcionario : public Pessoa {
 
   void ReadFileFuncionario(ifstream &is);
 
+  virtual double Calcula_ordenado();
+
  private:
   string setor;
   int num;  
+
+  float ord_base;
+  int h_extra;
+  float p_hora_extra;
 };
 
 

@@ -6,8 +6,10 @@
 
 Funcionario::Funcionario() {};
 
-Funcionario::Funcionario(string v_nome, Data v_data, string v_morada, string v_setor, int v_num) :
-  Pessoa(v_nome, v_data, v_morada), setor ( v_setor ), num ( v_num ) {}; 
+Funcionario::Funcionario(string v_nome, Data v_data, string v_morada, string v_setor, 
+    int v_num, float v_ord_base, int v_h_extra, float v_p_hora_extra) : 
+    Pessoa(v_nome, v_data, v_morada), setor ( v_setor ), num ( v_num ), 
+     ord_base ( v_ord_base ), h_extra ( v_h_extra ), p_hora_extra ( v_p_hora_extra ) {}; 
 
 void Funcionario::ShowFuncionario() {
   Pessoa::Show();

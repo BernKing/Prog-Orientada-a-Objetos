@@ -1,7 +1,7 @@
 #ifndef OPERARIO_H
 #define OPERARIO_H  
 
-#include "C:\Users\ASUS\Documents\GitHub\Prog.-Orientada-a-Objetos\Caderno_Exericios\include\funcionario.h"
+#include "C:\Users\ASUS\Documents\GitHub\Prog-Orientada-a-Objetos\Caderno_Exericios\include\funcionario.h"
 #include <iostream>
 #include <fstream>
 #include <string>

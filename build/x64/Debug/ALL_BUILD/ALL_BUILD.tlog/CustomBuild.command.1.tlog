@@ -1,0 +1,10 @@
+^C:\USERS\ASUS\DOCUMENTS\GITHUB\PROG-ORIENTADA-A-OBJETOS\CADERNO_EXERICIOS\CMAKELISTS.TXT
+setlocal
+"C:\Program Files\CMake\bin\cmake.exe" -SC:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/Caderno_Exericios -BC:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/build --check-stamp-file C:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/build/CMakeFiles/generate.stamp
+if %errorlevel% neq 0 goto :cmEnd
+:cmEnd
+endlocal & call :cmErrorLevel %errorlevel% & goto :cmDone
+:cmErrorLevel
+exit /b %1
+:cmDone
+if %errorlevel% neq 0 goto :VCEnd

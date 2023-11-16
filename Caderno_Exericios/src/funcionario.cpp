@@ -50,7 +50,7 @@ void Funcionario::ReadFuncionario() {
 
 void Funcionario::SaveFileFuncionario(ofstream &of) {
 	Pessoa::SaveFilePessoa(of);
-	of << setor << ";" << num <<  ";"<< ord_base << ";" << h_extra << ";";
+	of << num << ";" << setor <<  ";"<< ord_base << ";" << h_extra << ";";
 }
 
 void Funcionario::ReadFileFuncionario(ifstream &is) {
@@ -58,15 +58,19 @@ void Funcionario::ReadFileFuncionario(ifstream &is) {
 
 	Pessoa::ReadFilePessoa(is);
   is.getline(aux, 100, ';');
-	setor = aux;
-	is.getline(aux, 100, ';');
 	num = atoi(aux);
-
+	is.getline(aux, 100, ';');
+	setor = aux;
   
-  is.getline(aux, 100, ';');
-  ord_base = atoi(aux);
-  is.getline(aux, 100, ';');
-  h_extra = atoi(aux);
+	float ord; 
+	is >> ord;
+	ord_base = ord;  //corrigir erro
+	is.ignore(INT16_MAX, ';');
+
+	int h;
+	is >> h;
+	h_extra = h;
+	is.ignore(INT16_MAX, ';');
 }
 
 

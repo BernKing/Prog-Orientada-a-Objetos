@@ -1,4 +1,4 @@
-#include <C:\Users\ASUS\Documents\GitHub\Prog.-Orientada-a-Objetos\Caderno_Exericios\include\pessoa.h>
+#include <C:\Users\ASUS\Documents\GitHub\Prog-Orientada-a-Objetos\Caderno_Exericios\include\pessoa.h>
 
 #include <fstream>
 #include <string>
@@ -78,21 +78,21 @@ bool Pessoa::operator!=(const Pessoa& pessoa_comparar) const {
 }
 
 void Pessoa::MaisNovo(const Pessoa& pessoa1, const Pessoa& pessoa2) {
-        int pessoa1_data = pessoa1.dataP.GetDia() + pessoa1.dataP.GetMes() + pessoa1.dataP.GetAno(); 
-        int pessoa2_data = pessoa2.dataP.GetDia() + pessoa2.dataP.GetMes() + pessoa2.dataP.GetAno(); 
+    int pessoa1_data = pessoa1.dataP.GetDia() + pessoa1.dataP.GetMes() + pessoa1.dataP.GetAno(); 
+    int pessoa2_data = pessoa2.dataP.GetDia() + pessoa2.dataP.GetMes() + pessoa2.dataP.GetAno(); 
 
-        if (pessoa1_data < pessoa2_data) {
+    if (pessoa1_data < pessoa2_data) {
             
-            cout << "Pessoa mais nova:" << endl;
-            cout << pessoa1;
-        } else if (pessoa2_data < pessoa1_data) {
-            
-            cout << "Pessoa mais nova:" << endl;
-            cout << pessoa2;
-        } else {
+        cout << "Pessoa mais nova:" << endl;
+        cout << pessoa1;
+    } else if (pessoa2_data < pessoa1_data) {
+        
+        cout << "Pessoa mais nova:" << endl;
+        cout << pessoa2;
+    } else {
 
-            cout << "Mesma Idade." << endl;
-        }    
+        cout << "Mesma Idade." << endl;
+    }    
 }
 
 void Pessoa::SaveFilePessoa(ofstream &os){
@@ -103,9 +103,10 @@ void Pessoa::ReadFilePessoa(ifstream &is){
 	char aux[100];
 
 	is.getline(aux, 100, ';');
-	nome = aux;
+	nome = aux;	
+	
+	dataP.ReadFile(is);
+
 	is.getline(aux, 100, ';');
 	morada = aux;
-
-  dataP.ReadFile(is);
 }

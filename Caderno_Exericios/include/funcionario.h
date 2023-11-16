@@ -1,7 +1,7 @@
 #ifndef FUNCIONARIO_H
 #define FUNCIONARIO_H
 
-#include "C:\Users\ASUS\Documents\GitHub\Prog.-Orientada-a-Objetos\Caderno_Exericios\include\pessoa.h"
+#include "C:\Users\ASUS\Documents\GitHub\Prog-Orientada-a-Objetos\Caderno_Exericios\include\pessoa.h"
 
 //Vai herdas tudo da class pessoa
 //Herança Simples
@@ -35,7 +35,7 @@ class Funcionario : public Pessoa {
   inline void SetNum(int v_num) { num = num;}
 
   inline void setOrd_Base(float v_ord_base) { ord_base = v_ord_base; }
-  inline void SetH_Extra(float v_h_extra) { h_extra = v_h_extra; }
+  inline void SetH_Extra(int v_h_extra) { h_extra = v_h_extra; }
   inline void SetP_Hora_Extra(float v_p_hora_extra) { p_hora_extra = v_p_hora_extra; }
 
   friend istream& operator>>(istream& in, Funcionario& funcionario_temp);

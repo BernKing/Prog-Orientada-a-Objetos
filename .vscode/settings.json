@@ -1,18 +1,8 @@
 {
   "files.associations": {
     "fstream": "cpp",
-    "iostream": "cpp",
-    "string": "cpp",
     "vector": "cpp",
-    "xstring": "cpp",
-    "iosfwd": "cpp",
-    "ostream": "cpp",
-    "xiosbase": "cpp",
-    "xlocale": "cpp",
-    "xutility": "cpp",
-    "xlocmes": "cpp",
-    "sstream": "cpp",
-    "istream": "cpp"
+    "string": "cpp"
   },
-  "cmake.sourceDirectory": "C:/Users/ASUS/Documents/GitHub/Prog.-Orientada-a-Objetos/Caderno_Exericios"
+  "cmake.sourceDirectory": "C:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/Caderno_Exericios"
 }

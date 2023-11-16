@@ -1,18 +1,13 @@
-cmake_minimum_required(VERSION 3.15)
+cmake_minimum_required(VERSION 3.0)
+project(Caderno_Exericios)
 
-project(Caderno_Exericicios)
+set(CMAKE_CXX_STANDARD 11)
 
-set(CMAKE_CXX_STANDARD 20)  # Use the appropriate C++ standard
-
-# Specify the source files and include directories
-file(GLOB SOURCES "src/*.cpp")
+# Add include directories
 include_directories(include)
 
-# Define the executable target
-add_executable(Exercicios ${SOURCES})
+# Add source files
+file(GLOB_RECURSE SOURCES "src/*.cpp")
 
-# Add your source files
-add_executable(main main.cpp operario.cpp administrativo.cpp funcionario.cpp pessoa.cpp data.cpp)
-
-# Optionally, include directories for header files
-include_directories(C:/Users/ASUS/Documents/GitHub/Prog.-Orientada-a-Objetos/Caderno_Exericios/include)
+# Create an executable
+add_executable(exercicios ${SOURCES})

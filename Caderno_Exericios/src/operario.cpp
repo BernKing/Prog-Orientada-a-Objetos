@@ -1,4 +1,4 @@
-#include "C:\Users\ASUS\Documents\GitHub\Prog.-Orientada-a-Objetos\Caderno_Exericios\include\operario.h"
+#include "C:\Users\ASUS\Documents\GitHub\Prog-Orientada-a-Objetos\Caderno_Exericios\include\operario.h"
 
 using namespace std;
 
@@ -13,9 +13,9 @@ double Operario::Calcula_ordenado() {
 	int ordenado_final { 0 };
 	int ordenado_extra = GetH_Extra() * GetP_Hora_Extra();
 	if (f_turno) {
-		return ordenado_final = ordenado_extra + GetOrd_Base() + GetOrd_Base()* 25;
+		return GetH_Extra() * GetP_Hora_Extra() + GetOrd_Base() + GetOrd_Base()* 25;
 	} else {
-		return ordenado_final = ordenado_extra + GetOrd_Base();
+		return GetH_Extra() * GetP_Hora_Extra() + GetOrd_Base();
 	}
 }
 void Operario::SaveFileOperario(ofstream &ficheiroFuncionarios) {
@@ -30,7 +30,7 @@ void Operario::SaveFileOperario(ofstream &ficheiroFuncionarios) {
 
 void Operario::ReadFileOperario(ifstream &ficheiroFuncionarios) {
 	Funcionario::ReadFileFuncionario(ficheiroFuncionarios);
-	std::string turno;
+	string turno;
 	
 	getline(ficheiroFuncionarios, turno, ';');
 

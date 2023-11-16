@@ -23,9 +23,9 @@ class Funcionario : public Pessoa {
 
   friend istream& operator>>(istream& in, Funcionario& funcionario_temp);
 
-  void SaveFileFuncionario(ofstream &os);
+  void SaveFileFuncionario(ofstream &of);
 
-  void ReadFileFuncionario(ifstream &if);
+  void ReadFileFuncionario(ifstream &is);
 
  private:
   string setor;

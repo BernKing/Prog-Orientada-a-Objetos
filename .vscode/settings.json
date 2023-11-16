@@ -11,6 +11,7 @@
     "xlocale": "cpp",
     "xutility": "cpp",
     "xlocmes": "cpp",
-    "sstream": "cpp"
+    "sstream": "cpp",
+    "istream": "cpp"
   }
 }

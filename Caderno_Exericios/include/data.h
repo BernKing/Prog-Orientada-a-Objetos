@@ -33,9 +33,9 @@ class Data{
 
   friend istream& operator >>(istream& in, Data& data_temp);
 
-  void escrever_ficheiro();
+  void SaveFile(ofstream &os);
 
-  void leitura_ficheiro();
+  void ReadFile(ifstream &is);
 
   //construtores
   Data();

@@ -32,29 +32,21 @@ bool Data::Igual(Data &data2){
         return false;
     }
 }
-void Data::escrever_ficheiro(){
-    ofstream ficheiroData("Datas.txt");
-    if (!ficheiroData.is_open()){
-        cerr << "Erro ao abrir o ficheiro" << endl; //cerr usado para mostrar erros
-    }
-    ficheiroData << "Data: " << dia << "/" << mes << "/" << ano << endl;
-
-    ficheiroData.close();
+void Data::SaveFile(ofstream &os){
+	os << GetDia() << "/" << GetMes() << "/" << GetAno() << ";"<<"\n";
 }
 
-void Data::leitura_ficheiro(){
-    ifstream ficheiroData("Datas.txt");
-    if (!ficheiroData.is_open()){
-        cerr << "Erro ao abrir o ficheiro" << endl; //cerr usado para mostrar erros
-        exit(1);
-    }
-    string linha_ficheiro;
+void Data::ReadFile(ifstream &is){
+	char aux[10];
 
-    while (getline(ficheiroData, linha_ficheiro)) {
-        cout << linha_ficheiro << endl;
-    }
-    ficheiroData.close();
+	is.getline(aux, 10, '/');
+	dia = atoi(aux);
+	is.getline(aux, 10, '/');
+	mes = atoi(aux);
+	is.getline(aux, 10, ';');
+	ano = atoi(aux);
 }
+
 bool Data::operator ==(const Data& data_comparar) const{
     if (dia == data_comparar.dia && mes == data_comparar.mes && ano == data_comparar.ano){
         return true;

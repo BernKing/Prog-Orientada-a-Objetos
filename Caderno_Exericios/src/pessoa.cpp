@@ -95,44 +95,17 @@ void Pessoa::MaisNovo(const Pessoa& pessoa1, const Pessoa& pessoa2) {
         }    
 }
 
-void Pessoa::SaveFilePessoa(){
-    string ficheiro;
-    cout << "Introduza o nome do ficheiro: " << endl;
-    cin >> ficheiro;
-
-    string nome_ficheiro = ficheiro + ".txt";
-
-    // ofstream outFile(fileName, std::ios::app); para dar append, não dar overwrite sobre conteudo já escrito
-    ofstream ficheiroPessoa(nome_ficheiro);
-    if (!ficheiroPessoa.is_open()) {
-        cerr << "Erro ao abrir ficheiro" << endl;
-        exit(1);
-    }
-    ficheiroPessoa << nome << ";";
-    //dataP.escrever_ficheiro();
-    ficheiroPessoa << dataP.GetDia() << ";" << dataP.GetMes() << ";" << dataP.GetAno() << ";" ;
-    ficheiroPessoa <<morada << endl;
-    ficheiroPessoa.close();
+void Pessoa::SaveFilePessoa(ofstream &os){
+os << nome << ";" << morada << ";"  << dataP << ";";
 }
 
-void Pessoa::ReadFilePessoa(){
-    string ficheiro;
-    cout << "Introduza o nome do ficheiro: " << endl;
-    cin >> ficheiro;
+void Pessoa::ReadFilePessoa(ifstream &is){
+	char aux[100];
 
-    string nome_ficheiro = ficheiro + ".txt";
+	is.getline(aux, 100, ';');
+	nome = aux;
+	is.getline(aux, 100, ';');
+	morada = aux;
 
-
-    ifstream ficheiroPessoa(nome_ficheiro);
-    if (!ficheiroPessoa.is_open()) {
-        cerr << "Erro ao abrir o ficheiro" << endl; //cerr usado para mostrar erros
-        exit(1);
-    }
-    string linha_ficheiro;
-
-    while (getline(ficheiroPessoa, linha_ficheiro)) {
-        //k)
-        cout << linha_ficheiro << endl;
-    }
-    ficheiroPessoa.close();
+  dataP.ReadFile(is);
 }

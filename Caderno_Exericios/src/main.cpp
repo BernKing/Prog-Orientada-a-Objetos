@@ -82,11 +82,40 @@ int main() {
   cin >> Inacio;
   Inacio.ShowFuncionario();
 
-  BernardoAlmeida.SaveFileFuncionario();
-  VascoMaisCedo.SaveFileFuncionario();
-  Inacio.SaveFileFuncionario();
-
   vector<Funcionario> vetor_funcionarios;
+
+  Funcionario c, d;
+
+  ofstream ficheiro;
+	string ficheiroTxt = "funcionarios.txt";
+	ficheiro.open(ficheiroTxt);
+	if (ficheiro)
+	{
+		c.SaveFileFuncionario(ficheiro);
+		d.SaveFileFuncionario(ficheiro);
+		ficheiro.close();
+		cout << "Ficheiro " << ficheiroTxt << " criado com sucesso!" << endl;
+	}	else {
+		cout << "ERRO a Abrir ficheiro " << ficheiroTxt << '\n';
+  }
+
+  ifstream ifficheiro;
+	Funcionario vector[4];
+
+	ifficheiro.open(ficheiroTxt);
+	if (ficheiro)	{
+
+		int contador=0;
+		while (ifficheiro.peek() != EOF){
+			vector[contador].ReadFileFuncionario(ifficheiro);
+			contador++;
+		}
+
+		ifficheiro.close();
+		cout << "Ficheiro " << ficheiroTxt << " lido com sucesso!" << endl;
+	}
+	else
+		cout << "ERRO: n�o � poss�vel abrir o ficheiro " << ficheiroTxt << '\n';
 
 
   system("pause");

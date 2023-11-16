@@ -4,6 +4,13 @@
     "iostream": "cpp",
     "string": "cpp",
     "vector": "cpp",
-    "xstring": "cpp"
+    "xstring": "cpp",
+    "iosfwd": "cpp",
+    "ostream": "cpp",
+    "xiosbase": "cpp",
+    "xlocale": "cpp",
+    "xutility": "cpp",
+    "xlocmes": "cpp",
+    "sstream": "cpp"
   }
 }

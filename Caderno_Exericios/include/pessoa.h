@@ -49,10 +49,10 @@ class Pessoa {
   void MaisNovo(const Pessoa& pessoa1, const Pessoa& pessoa2);
 
   //j)
-  void SaveFilePessoa();
+  void SaveFilePessoa(ofstream &os);
 
   //k) e i)
-  void ReadFilePessoa();
+  void ReadFilePessoa(ifstream &is);
 
  private:
   string nome;

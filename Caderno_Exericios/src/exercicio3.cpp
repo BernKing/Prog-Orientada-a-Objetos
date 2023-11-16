@@ -43,9 +43,11 @@ int Exercicio3(){
     cout << data2<< endl;
     cout << data3 << endl;
 
+    ofstream Ficheiro;
+    Ficheiro.open("data.txt");
     //alinea k)
-    data3.escrever_ficheiro();
-    data3.leitura_ficheiro();
+    Data data4;
+    data4.SaveFile(Ficheiro);
     
 
 

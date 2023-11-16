@@ -118,7 +118,7 @@ int Exercicio4(){
     jonas.MaisNovo(jonas, joni);
 
     //j)
-    jonas.SaveFilePessoa();
+    //jonas.SaveFilePessoa();
 
     system("pause");    
     return 0;

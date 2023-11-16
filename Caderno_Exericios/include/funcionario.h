@@ -44,7 +44,7 @@ class Funcionario : public Pessoa {
 
   void ReadFileFuncionario(ifstream &is);
 
-  virtual double Calcula_ordenado();
+  virtual double Calcula_ordenado() = 0;
 
  private:
   string setor;

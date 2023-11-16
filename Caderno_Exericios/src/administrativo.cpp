@@ -8,8 +8,6 @@ Administrativo::Administrativo(string v_nome, Data v_data, string v_morada, stri
 
 
 double Administrativo::Calcula_ordenado() {
-	int ordenado_final { 0 };
-	int ordenado_extra = GetH_Extra() * GetP_Hora_Extra();
-
-	return ordenado_final = ordenado_extra + GetOrd_Base();
+	
+	return GetOrd_Base() + GetH_Extra() * GetP_Hora_Extra();
 }

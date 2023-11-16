@@ -59,7 +59,7 @@ void OrdenarDataNascimento(vector<Funcionario> vetor_funcionarios) {
     }
   }
 }
-
+/*
 int main() {
 
   Funcionario BernardoAlmeida;
@@ -121,4 +121,4 @@ int main() {
   system("pause");
   return 0;
 }
-
+*/

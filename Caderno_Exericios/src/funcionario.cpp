@@ -19,6 +19,7 @@ void Funcionario::ShowFuncionario() {
 
 istream& operator>>(istream& in, Funcionario& funcionario_temp) {
   // Chama o >> sobrecarregado de Pessoa, static_cast converte de forma segura a pessoa para funcioario
+  //in >> (Pessoa&)funcionario_temp;
   in >> static_cast<Pessoa&>(funcionario_temp);
 
   // Read data specific to Funcionario

@@ -62,7 +62,7 @@ void Nascimento1990(vector<Pessoa>& VetorPessoas){
         }
     }
 }
-
+/*
 int Exercicio4(){
     //i)
     vector<Pessoa> pessoas;
@@ -87,12 +87,12 @@ int Exercicio4(){
 
     //alinea e)
 
-    /*
-    int dia = 0; int mes = 0; int ano = 0;
-    cout << "Insira o dia, mes e o ano separados por um Enter" << endl;
-    cin >> dia; cin >> mes; cin >> ano;
-    joni.SetDataN(dia, mes, ano);
-    */
+    
+    //int dia = 0; int mes = 0; int ano = 0;
+    //cout << "Insira o dia, mes e o ano separados por um Enter" << endl;
+    //cin >> dia; cin >> mes; cin >> ano;
+    //joni.SetDataN(dia, mes, ano);
+    
 
     joni.Show();
     //alinea f)
@@ -123,3 +123,4 @@ int Exercicio4(){
     system("pause");    
     return 0;
 }
+*/

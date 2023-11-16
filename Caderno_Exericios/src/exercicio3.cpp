@@ -4,15 +4,15 @@
 
 #include <iostream>
 #include <fstream>
-
+/*
 int Exercicio3(){
     //e)
     Data data2;
-    /*
-    data2.GetDia();
-    data2.GetMes();
-    data2.GetAno();   
-    */
+    
+    //data2.GetDia();
+    //data2.GetMes();
+    //data2.GetAno();   
+    
     data2.SetDia(2); data2.SetMes(4); data2.SetAno(1997);   
 
     data2.Show();
@@ -55,3 +55,4 @@ int Exercicio3(){
     return 0;
 }
 
+*/

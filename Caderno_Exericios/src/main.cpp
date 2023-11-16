@@ -10,7 +10,7 @@
 
 using namespace std;
 
-//6.5
+//6.5 a
 void ReadFile (vector<Funcionario*> &VetorFuncionarios) {
 	ifstream ficheiroFuncionarios;
 	ficheiroFuncionarios.open("C:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/Caderno_Exericios/src/Funcionarios.txt");
@@ -45,21 +45,39 @@ void ReadFile (vector<Funcionario*> &VetorFuncionarios) {
 	ficheiroFuncionarios.close();
 }
 
+//6.5b)
+void CalcularOrdenado(vector<Funcionario*> &VetorFuncionarios) {
+	cout << endl << endl << "-----    Lista de Funcionarios    -----" << endl;
+  int i = 0;
+  for (i = 0; i < VetorFuncionarios.size(); i++) {
+    cout << VetorFuncionarios[i]->GetNum()  << "\t "
+         << VetorFuncionarios[i]->GetNome() << "\t "
+         << VetorFuncionarios[i]->Calcula_ordenado() << endl;
+  }
+  cout << "----    ----" << endl;
+}
 
 int main() {
   vector<Funcionario*> VetorFuncionarios;
-  printf("Menu...");
+  printf("MENU MENU MENU...");
   printf("Funcionar Organizacao\n\n");
+  printf("1-LER FUNCIONARIOS DO FICHEIRO\n2-CALCULAR ORDENADOS\n");
   int opcao;
   while (true) {
-    cout << "Escolha uma opcao: ";
+    cout << "\nEscolha uma opcao: ";
     cin >> opcao;
     switch (opcao) 
     {
     case 1:
       ReadFile(VetorFuncionarios);
-      return 0;
+      break;
     
+    case 2:
+      CalcularOrdenado(VetorFuncionarios);
+      break;
+
+    case 3:
+      return 0;
     default:
       break;
     }

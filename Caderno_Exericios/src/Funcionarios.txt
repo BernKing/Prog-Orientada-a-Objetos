@@ -1,3 +1,4 @@
 O:Jonas Culatra; 20/9/1987; Rua da direita n 2;25023; Pintura;1100;20;sim;
+O:Vasco Macedo; 4/8/2004; Rua da Familia Macedo;78798; Artilheiro;3000;5;sim;
 A:Joni Rato;4/2/1990; Rua da esquerda n 3;25024; Comercial;900;0;
 O:Luis Carlos; 1/12/1985; Rua Central n22;10000; Ferragem;1100;0;nao;

@@ -64,13 +64,13 @@ void Funcionario::ReadFileFuncionario(ifstream &is) {
   
 	float ord; 
 	is >> ord;
-	ord_base = ord;  //corrigir erro
-	is.ignore(INT16_MAX, ';');
+	ord_base = ord;  
+	is.get();
 
 	int h;
 	is >> h;
 	h_extra = h;
-	is.ignore(INT16_MAX, ';');
+	is.get();
 }
 
 

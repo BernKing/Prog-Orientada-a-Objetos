@@ -1,6 +1,8 @@
 #include "C:\Users\ASUS\Documents\GitHub\Prog-Orientada-a-Objetos\Caderno_Exericios\include\administrativo.h"
 
-Administrativo::Administrativo() {}
+Administrativo::Administrativo() {
+  SetP_Hora_Extra(10);
+}
 
 Administrativo::Administrativo(string v_nome, Data v_data, string v_morada, string v_setor, 
   int v_num, float v_ord_base, int v_h_extra, float v_p_hora_extra)

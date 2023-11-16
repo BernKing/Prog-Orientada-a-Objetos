@@ -31,17 +31,42 @@ istream& operator>>(istream& in, Funcionario& funcionario_temp) {
   return in; 
 }
 
+void Funcionario::ReadFuncionario() {
+  Pessoa::ReadK();
+	cout << "Setor:";
+	getline(cin, setor);
+
+  cout << "Num:";
+	cin >> num;
+
+	//extra 
+	cout << "Ord Base:";
+	cin >> ord_base;
+
+	cout << "Horas Extras";
+	cin >> h_extra;
+}
+
+
 void Funcionario::SaveFileFuncionario(ofstream &of) {
 	Pessoa::SaveFilePessoa(of);
-	of << num << ";" << setor << "\n";
+	of << setor << ";" << num <<  ";"<< ord_base << ";" << h_extra << ";";
 }
 
 void Funcionario::ReadFileFuncionario(ifstream &is) {
 	char aux[100];
 
 	Pessoa::ReadFilePessoa(is);
+  is.getline(aux, 100, ';');
+	setor = aux;
 	is.getline(aux, 100, ';');
 	num = atoi(aux);
-	is.getline(aux, 100, '\n');
-	setor = aux;
+
+  
+  is.getline(aux, 100, ';');
+  ord_base = atoi(aux);
+  is.getline(aux, 100, ';');
+  h_extra = atoi(aux);
 }
+
+

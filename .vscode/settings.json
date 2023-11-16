@@ -13,5 +13,6 @@
     "xlocmes": "cpp",
     "sstream": "cpp",
     "istream": "cpp"
-  }
+  },
+  "cmake.sourceDirectory": "C:/Users/ASUS/Documents/GitHub/Prog.-Orientada-a-Objetos/Caderno_Exericios"
 }

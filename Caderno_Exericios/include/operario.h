@@ -2,7 +2,9 @@
 #define OPERARIO_H  
 
 #include "C:\Users\ASUS\Documents\GitHub\Prog.-Orientada-a-Objetos\Caderno_Exericios\include\funcionario.h"
-
+#include <iostream>
+#include <fstream>
+#include <string>
 
 class Operario : public Funcionario {
 public:
@@ -14,7 +16,10 @@ public:
   double Calcula_ordenado() override;
 
   inline bool GetTurno() { return f_turno; }
-  inline bool SetTurno(bool v_f_turno) { f_turno = v_f_turno; }
+  inline void SetTurno(bool v_f_turno) { f_turno = v_f_turno; }
+
+  void ReadFileOperario(ifstream &ficheiroFuncionarios);
+  void SaveFileOperario(ofstream &ficheiroFuncionarios);
 
  private:
   bool f_turno;

@@ -26,9 +26,7 @@ class Pessoa {
 
   inline string GetMorada() const{ return morada; };
 
-  inline int GetAno() const {
-    return dataP.GetAno();
-  }
+  inline int GetAno() const { return dataP.GetAno(); };
 
   //c) 
   void Show();

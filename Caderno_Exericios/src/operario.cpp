@@ -1,5 +1,7 @@
 #include "C:\Users\ASUS\Documents\GitHub\Prog.-Orientada-a-Objetos\Caderno_Exericios\include\operario.h"
 
+using namespace std;
+
 Operario::Operario() {};
 
 Operario::Operario(string v_nome, Data v_data, string v_morada, string v_setor, 
@@ -15,4 +17,28 @@ double Operario::Calcula_ordenado() {
 	} else {
 		return ordenado_final = ordenado_extra + GetOrd_Base();
 	}
+}
+void Operario::SaveFileOperario(ofstream &ficheiroFuncionarios) {
+	Funcionario::SaveFileFuncionario(ficheiroFuncionarios);
+
+	if (f_turno){
+		ficheiroFuncionarios << "sim;";
+	} else{
+		ficheiroFuncionarios << "não;";
+	}
+}
+
+void Operario::ReadFileOperario(ifstream &ficheiroFuncionarios) {
+	Funcionario::ReadFileFuncionario(ficheiroFuncionarios);
+	std::string turno;
+	
+	getline(ficheiroFuncionarios, turno, ';');
+
+	if (turno == "sim")	{
+		f_turno = true;			 
+	}	else	{
+		f_turno = false;
+	}
+
+
 }

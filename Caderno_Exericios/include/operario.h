@@ -21,6 +21,8 @@ public:
   void ReadFileOperario(ifstream &ficheiroFuncionarios);
   void SaveFileOperario(ofstream &ficheiroFuncionarios);
 
+  void ReadOperario();
+
  private:
   bool f_turno;
 

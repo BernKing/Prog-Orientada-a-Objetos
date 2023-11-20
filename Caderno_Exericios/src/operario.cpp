@@ -43,3 +43,16 @@ void Operario::ReadFileOperario(ifstream &ficheiroFuncionarios) {
 
 
 }
+
+
+void Operario::ReadOperario() {
+	Funcionario::ReadFuncionario();
+	string turno;
+	cout << "Operario trabalho por turno? (y ou n): ";
+	cin >> turno;
+	if (turno == "y") {
+		f_turno == true;
+	} else if (turno == "n"){
+		f_turno == false;
+	}
+}

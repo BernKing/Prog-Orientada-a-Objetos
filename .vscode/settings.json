@@ -3,7 +3,8 @@
     "fstream": "cpp",
     "vector": "cpp",
     "string": "cpp",
-    "xstring": "cpp"
+    "xstring": "cpp",
+    "xutility": "cpp"
   },
   "cmake.sourceDirectory": "C:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/Caderno_Exericios"
 }

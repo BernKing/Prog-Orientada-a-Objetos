@@ -18,8 +18,9 @@ public:
   inline bool GetTurno() { return f_turno; }
   inline void SetTurno(bool v_f_turno) { f_turno = v_f_turno; }
 
-  void ReadFileOperario(ifstream &ficheiroFuncionarios);
-  void SaveFileOperario(ofstream &ficheiroFuncionarios);
+  void ReadFileOperario(ifstream &ficheiroOperario);
+  
+  void SaveFileOperario(ofstream &ficheiroOperario);
 
   void ReadOperario();
 

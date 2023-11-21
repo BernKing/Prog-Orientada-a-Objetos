@@ -19,15 +19,32 @@ double Operario::Calcula_ordenado() {
 		return GetH_Extra() * GetP_Hora_Extra() + GetOrd_Base();
 	}
 }
-void Operario::SaveFileOperario(ofstream &ficheiroFuncionarios) {
-	Funcionario::SaveFileFuncionario(ficheiroFuncionarios);
 
-	if (f_turno){
-		ficheiroFuncionarios << "sim;";
-	} else{
-		ficheiroFuncionarios << "não;";
+
+
+
+void Operario::ReadOperario() {
+	Funcionario::ReadFuncionario();
+	string turno;
+	cout << "Operario trabalho por turno? (y ou n): ";
+	cin >> turno;
+	if (turno == "y") {
+		f_turno = true;
+	} else if (turno == "n"){
+		f_turno = false;
 	}
 }
+
+void Operario::SaveFileOperario(ofstream& ficheiroOperario) {
+
+	Funcionario::SaveFileFuncionario(ficheiroOperario);
+	if (f_turno) {
+		ficheiroOperario << "sim;";
+	} else {
+		ficheiroOperario << "nao;";
+	}
+}
+
 
 void Operario::ReadFileOperario(ifstream &ficheiroFuncionarios) {
 	Funcionario::ReadFileFuncionario(ficheiroFuncionarios);
@@ -42,17 +59,4 @@ void Operario::ReadFileOperario(ifstream &ficheiroFuncionarios) {
 	}
 
 
-}
-
-
-void Operario::ReadOperario() {
-	Funcionario::ReadFuncionario();
-	string turno;
-	cout << "Operario trabalho por turno? (y ou n): ";
-	cin >> turno;
-	if (turno == "y") {
-		f_turno == true;
-	} else if (turno == "n"){
-		f_turno == false;
-	}
 }

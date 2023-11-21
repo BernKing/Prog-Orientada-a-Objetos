@@ -153,11 +153,32 @@ void EliminarFuncionario(vector <Funcionario*> &VetorFuncionarios) {
   }
 }
 
+//h) Guardar, num ficheiro “Administrativos.txt”, os dados dos Administrativos. 
+//i) Guardar, num ficheiro “Operarios.txt”, os dados dos Operários. 
+
+
+void GuardarFicheiroAdminOperario(vector <Funcionario*> &VetorFuncionarios, ofstream& fileAdmin, ofstream& fileOperario) {
+  int i = 0;
+  for (i = 0; i < VetorFuncionarios.size(); i++) {
+    if (Administrativo* admin = dynamic_cast<Administrativo*>(VetorFuncionarios[i])) {
+      admin->SaveFileFuncionario(fileAdmin);
+      fileAdmin << endl;
+      printf("Escrito Admin.");
+    } else if (Operario* operario = dynamic_cast<Operario*>(VetorFuncionarios[i])) {
+      operario->SaveFileOperario(fileOperario);
+      fileOperario << endl;
+      printf("Escrito Operario.");
+    }
+  }
+}
+
+
 int main() {
   vector<Funcionario*> VetorFuncionarios;
   printf("MENU MENU MENU...");
   printf("Funcionar Organizacao\n\n");
-  printf("1-LER FUNCIONARIOS DO FICHEIRO\n2-CALCULAR ORDENADOS\n3-Pesquisar Funcionario(numero)\n4-Alterar Ordenado(numero func)\n5-Adicionar Operario ou Administrativo\n6-Nomes Operarios turnos\n7-Eliminar numero Funcionario");
+  printf("1-LER FUNCIONARIOS DO FICHEIRO\n2-CALCULAR ORDENADOS\n3-Pesquisar Funcionario(numero)\n4-Alterar Ordenado(numero func)\n");
+  printf("5-Adicionar Operario ou Administrativo\n6-Nomes Operarios turnos\n7-Eliminar numero Funcionario\n8-Guardar Administrativos e Operarios em ficheiros proprios.\n");
   int opcao;
   while (true) {
     cout << "\nEscolha uma opcao: ";
@@ -189,7 +210,20 @@ int main() {
     case 7:
       EliminarFuncionario(VetorFuncionarios);
       break;
-    case 8:
+
+    case 8: {
+      ofstream ficheiroOperario, ficheiroAdmin;
+      ficheiroOperario.open("Operarios.txt");
+      ficheiroAdmin.open("Administrativos.txt");
+
+
+      GuardarFicheiroAdminOperario(VetorFuncionarios, ficheiroAdmin, ficheiroOperario);
+
+      ficheiroOperario.close();
+      ficheiroAdmin.close();
+      break;
+    }
+    case 9:
       return 0;
     default:
       break;

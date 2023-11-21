@@ -33,7 +33,7 @@ bool Data::Igual(Data &data2){
     }
 }
 void Data::SaveFile(ofstream &os){
-	os << GetDia() << "/" << GetMes() << "/" << GetAno() << ";"<<"\n";
+	os << GetDia() << "/" << GetMes() << "/" << GetAno() << ";";
 }
 
 void Data::ReadFile(ifstream &is){

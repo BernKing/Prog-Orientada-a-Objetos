@@ -4,7 +4,8 @@
     "vector": "cpp",
     "string": "cpp",
     "xstring": "cpp",
-    "xutility": "cpp"
+    "xutility": "cpp",
+    "iosfwd": "cpp"
   },
   "cmake.sourceDirectory": "C:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/Caderno_Exericios"
 }

@@ -96,7 +96,9 @@ void Pessoa::MaisNovo(const Pessoa& pessoa1, const Pessoa& pessoa2) {
 }
 
 void Pessoa::SaveFilePessoa(ofstream &os){
-os << nome << ";" << morada << ";"  << dataP << ";";
+os << nome << ";" << morada << ";";
+dataP.SaveFile(os);
+
 }
 
 void Pessoa::ReadFilePessoa(ifstream &is){

@@ -239,6 +239,15 @@ X_VCPKG_APPLOCAL_DEPS_INSTALL:BOOL=OFF
 // serialization.
 X_VCPKG_APPLOCAL_DEPS_SERIALIZED:BOOL=OFF
 
+//Value Computed by CMake
+YourProjectName_BINARY_DIR:STATIC=C:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/build
+
+//Value Computed by CMake
+YourProjectName_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+YourProjectName_SOURCE_DIR:STATIC=C:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/Caderno_Exericios
+
 //Path to a program.
 Z_VCPKG_BUILTIN_POWERSHELL_PATH:FILEPATH=C:/Windows/System32/WindowsPowerShell/v1.0/powershell.exe
 

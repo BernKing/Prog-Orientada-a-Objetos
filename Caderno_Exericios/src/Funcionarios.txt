@@ -1,0 +1,5 @@
+O:Jonas Culatra; Rua da direita n 2;20/9/1987;25023; Pintura;1100;20;sim;
+O:Vasco Macedo; Rua da Familia Macedo;4/8/2004;78798; Artilheiro;3000;5;sim;
+A:Joni Rato; Rua da esquerda n 3;4/2/1990;25024; Comercial;900;0;
+O:Luis Carlos; Rua Central n22;1/12/1985;10000; Ferragem;1100;0;nao;
+A:Adrusila Lopes;Rua E n6;6/6/1996;25051;RecHumanos;800;0;

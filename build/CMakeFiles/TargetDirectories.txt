@@ -1,0 +1,3 @@
+C:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/build/CMakeFiles/exercicios.dir
+C:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/build/CMakeFiles/ALL_BUILD.dir
+C:/Users/ASUS/Documents/GitHub/Prog-Orientada-a-Objetos/build/CMakeFiles/ZERO_CHECK.dir

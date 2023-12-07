@@ -1,0 +1,28 @@
+/*
+Exercicio7
+*/
+#include <C:\Users\ASUS\Documents\GitHub\Prog-Orientada-a-Objetos\Caderno_Exericios\include\GerirNumeros.h>
+#include <iostream>
+#include <list>
+
+using namespace std;
+
+
+int main(void) {
+  std::list<int> lista;
+
+  // Add elements to the list
+
+
+  GerirNumeros gestaoNumeros(lista);
+  gestaoNumeros.inserirNumero(23);
+  gestaoNumeros.inserirNumero(100);
+  gestaoNumeros.inserirNumero(5000);
+
+  printf("Show:");
+  gestaoNumeros.Show();
+
+
+  system("pause");
+  return 0;
+}
